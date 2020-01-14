@@ -1,9 +1,10 @@
 Fake news is a major concern in our society right now.We believe what we saw and sometimes it leads to catastropic results. 
 It has gone hand-in-hand with the rise of the data-driven era – not a coincidence when you consider the sheer volume of data we are generating every second!
-Fake news is such a widespread issue that even the world’s leading dictionaries are trying to combat it in their own way. Here are two leading lights in that space taking a stance in recent years:
-    - Dictionary.com listed ‘misinformation’ as their Word of the Year in 2018
-    - Oxford Dictionary picked ‘post-truth’ as their Word of the Year a few years ago
-
+Fake news is such a widespread issue that even the world’s leading dictionaries are trying to combat it in their own way. Here are two leading lights in that space taking a stance in recent years
+<ul>
+     <li> Dictionary.com listed ‘misinformation’ as their Word of the Year in 2018. </li>
+     <li> Oxford Dictionary picked ‘post-truth’ as their Word of the Year a few years ago </li>
+</ul>
 <img src =  'https://miro.medium.com/max/960/1*5awP7XekQwP9o9vlMsyH3w.png'>
 
 Fake news is a form of news consisting of deliberate disinformation or hoaxes spread via traditional news media (print and broadcast) or online social media.
