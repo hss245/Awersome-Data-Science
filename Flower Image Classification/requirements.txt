@@ -1,4 +1,0 @@
-opencv-python
-tensorflow==2.4.1
-matplotlib
-numpy
