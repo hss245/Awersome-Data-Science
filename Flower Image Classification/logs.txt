@@ -1,0 +1,7 @@
+Data Successfully Loaded at 31-01-2023:13-49-58
+CNN Model Created at 31-01-2023:13-49-58
+Model Compiled at 31-01-2023:13-49-58
+Model Training started at 31-01-2023:13-49-58
+Model Training completed at 31-01-2023:13-55-16
+Assets written to: flowerTFModel/assets
+Model successfully saved at 31-01-2023:13-55-16
