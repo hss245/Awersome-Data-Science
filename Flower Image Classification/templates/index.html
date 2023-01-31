@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title> Flower Image Classification </title>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <style>
+
+        * {box-sizing: border-box;}
+        
+        body { 
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+                padding: 30px;
+                text-align: center;
+                background: #447fc7;
+                color: white;
+                font-size: 37px;
+                }
+            
+        .button {
+                padding: 20px 23px;
+                font-size: 0.7em;
+                width : 200px;
+                cursor: pointer;
+                border: 0px;
+                position: relative;
+                margin: 8px;
+                transition: all .25s ease;
+                background: #67b64c;;
+                color: #ffffff;
+                overflow: hidden;
+                border-radius: 10px
+                }
+
+        .button:active {
+                background: #007a63;
+                }
+
+        .button__text {
+                font: bold 20px "Quicksand", san-serif;
+                color: #ffffff;
+                transition: all 0.2s;
+                }
+        
+        #display_image{
+            width : 500px;
+            height : 500px;
+            border : 1px solid black;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .spacing {
+            padding: 30px 30px;
+        }
+
+        article, aside, figure, footer, header, hgroup, 
+        menu, nav, section { display: block; }
+        
+        </style>
+</head>
+
+<body style="background-color:rgb(231, 239, 240);">
+
+    <div class = "header">
+    FLOWER IMAGE CLASSIFICATION
+    </div>
+
+    <br> <br> <br>
+
+    <form action = "/prediction" method = "post", enctype = "multipart/form-data"> 
+        <div class = "spacing">
+            <input type = 'file' name = "fileUpload" id = "image_input" accept = "image/png, image/jpg">
+            <br> <br>
+            <div id = "display_image"></div>
+            <br> <br> <br>
+            <button class = "button" type = "buttom" value = "Get Prediction">
+                <span class = "button__text"> Get Prediction </span>
+            </button>
+            <br> <br> 
+            
+            <font size = 5px color = 'red'> 
+                {{ returnedText }} 
+            </font>
+
+        </div>
+    </form>
+
+<script>
+    const image_input = document.querySelector("#image_input")
+    var uploaded_image = "";
+
+    image_input.addEventListener("change", function(){
+        const reader = new FileReader();
+        reader.addEventListener("load", () => {
+            uploaded_image = reader.result;
+            document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+        });
+        reader.readAsDataURL(this.files[0]);
+    })
+
+</script>
+
+</body>
+</html>
